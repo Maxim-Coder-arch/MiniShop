@@ -1,9 +1,13 @@
+using MiniShop.Api.Services;
 using Scalar.AspNetCore;
 
 WebApplicationBuilder? builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<IOrderCalculator, OrderCalculator>();
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();

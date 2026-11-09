@@ -1,7 +1,7 @@
 ﻿using MiniShop.Api.Models;
 
 namespace MiniShop.Api.Services;
-public class OrderCalculator
+public class OrderCalculator : IOrderCalculator
 {
     private const decimal FirstDiscountThreshold = 1000m;
     private const decimal SecondDiscountThreshold = 5000m;
